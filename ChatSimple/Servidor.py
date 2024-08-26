@@ -3,7 +3,7 @@ import threading
 import time
 
 MAX_PP = 100
-PORT = 5000
+PORT = 5001
 terminate = False
 listPP = []
 listThreads = []
@@ -39,6 +39,9 @@ def isClientAlive(client_socket):
         return True
     except socket.error:
         return False
+
+
+
 
 def manageClients(clt : people):
     conn = clt.getConn()
